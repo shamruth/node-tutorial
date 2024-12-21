@@ -5,6 +5,7 @@ writeFile('./asyncfile/FILE.txt',"IN ASYNC TYPE WE USE CALLBACK FUNCTION THAT TE
     {
         console.log(err)
     }
+    // a call back executes after the if
 })
 readFile('./asyncfile/FILE.txt','utf8',(err,read1)=>
 {
