@@ -11,5 +11,5 @@ writeFileSync
 )// it write the value if file already exist it over write it
 writeFileSync
 (
-    "./syncfiles/writefileappend.txt","THIS IS THE WRITEFILE! ",{flag:'a'}
+    "./syncfiles/writefileappend.txt",`THIS IS THE WRITEFILE! ${read_first} ${read_second}`,{flag:'a'}
 )//we use flag 'a' to append the file content if file already exist
