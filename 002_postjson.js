@@ -27,7 +27,7 @@ app.get('/',(req,res)=>
 // "/:" act as a place holder for the id passing is the url now :id is the NAMESPACE TO request parameter passed in the url
 app.put('/:id',(req,res)=>
 {
-    const USERID = req.params.id;
+    const USERID = parseInt(req.params.id);//yesterday i have been using string as id for the whole time but no i need to convert the parameter to integer since i will be passing integer as paramater
     const {USERNAME,PASSWORD}=req.body; 
     post_json.forEach(element => {
             if(element.USERID===USERID)
@@ -51,7 +51,7 @@ app.put('/:id',(req,res)=>
 
 app.delete('/:id',(req,res)=>
 {
-    const USERID=req.params.id;
+    const USERID=parseInt(req.params.id);
     for (i=0;i<post_json.length;i++)
     {
         if(post_json[i].USERID===USERID)
