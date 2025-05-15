@@ -29,8 +29,8 @@ app.get('/GETFOR/:id',(req,res)=>
         {
             res.json(post_json[i]);
         }
-        else
-            res.end("NO DATA FOUND WITH SPECIFIED USERID")
+       /* else
+            res.end("NO DATA FOUND WITH SPECIFIED USERID")*/ //USING ELSE THROWS ERROR THAT IS SERVER BEING CALLEDOFF FOR NUMBER OFF TIME WHEN VALUE IS NOT THERE
     }
     console.log(post_json);
 })
