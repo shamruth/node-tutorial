@@ -4,7 +4,7 @@ const express=require('express');
 const mongoose=require('mongoose');
 //mongoose atlas connection
 mongoose
-  .connect(process.env.ATLAS_URI,)
+  .connect(process.env.LOCAL_URI,)
   .then(() => {
     console.log("DB CONNECTED");
   })
