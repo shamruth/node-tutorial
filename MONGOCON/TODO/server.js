@@ -26,6 +26,7 @@ const todomodel=mongoose.model("TODO"/*DB NAME*/,todoschema);
 const app=express();
 const port=process.env.PORT;
 app.use(express.json());
+app.use(cors({ origin: "http://192.168.137.1:3000" }));
 
 app.get('/',(req,res)=>
 {
